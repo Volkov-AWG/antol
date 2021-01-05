@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Регистрация</title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+<h1>{header}</h1>
+<p>{message}</p>
+    <form action="/mytable" method="post">
+        <br>
+        <label>Имя</label><br>
+        <input type="text" name="name" /><br><br>
+        <label>Фамилия</label><br>
+        <input type="text" name="lastname" /><br><br>
+        <label>Дата рождения</label><br>
+        <input type="date" name="birthday" /><br><br>
+        <label>Номер зачетного билета</label><br>
+        <input type="text" name="biletnum" /><br><br>
+        <input type="submit" value="Отправить" >
+    </form>
+<div>
+    <ul>
+        {selectResult}
+    </ul>
+</div>
+
+</body>
+
+</html>
