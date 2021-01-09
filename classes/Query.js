@@ -12,7 +12,7 @@ const getStud = async (request, response) => {
 const getMyTable = async (request, response) => {
     const res = await db.select(`Select * from mytable`);
     //console.log(res);
-    //response.json(res);
+    response.json(res);
 }
 module.exports = {
     getStud,
