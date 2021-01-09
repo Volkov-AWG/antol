@@ -3,13 +3,13 @@ const Query = require('./classes/Query');
 const config = require('./classes/config');
 const db = new DB(config.db);
 const fs = require("fs");
-const express = require('express');
-const app = express();
 
 
 const  getTree = async (request, response) => {
+    
     const item = await Query.getMyTable;
     console.log(item);
+    
     fs.readFile("./views/mytable.html", "utf-8", (error, data) => {
 
         let htmlData = '';
@@ -35,13 +35,11 @@ const saveTree = async (request, response) => {
    console.log('Step1');
    console.log(`insert into mytable (name, lastname, birthday, biletnum) values (\'${request.body.name}\',\'${request.body.lastname}\',to_date(\'${request.body.birthday}\','DD.MM.YYYY),\'${request.body.biletnum}\');`);
    //const res = await db.insert(`insert into mytable (name, lastname, birthday, biletnum) values (\'${request.body.name}\',\'${request.body.lastname}\',\'${request.body.birthday}\',\'${request.body.biletnum}\');`);
-
+/*закоменчено, что бы просто тестить, а не отправлять каждый раз в базу рандомные наборы в форме*/
+    
     response
        .status(200)
        .json({name:'Great'});
-
-
-   //response.redirect('/mytable')
 
 }
 
