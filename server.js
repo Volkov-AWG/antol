@@ -17,25 +17,6 @@ app
     .get(getTree)
     .post(saveTree)
 
-
-app
-    .route('/checkstud')
-    .get(Query.getStud)
-
-app
-    .route('/checmy')
-    .get(Query.getMyTable)
-
-
-/*app
-    .set('view engine', 'html')
-    .use(express.urlencoded())
-    .use(express.json())
-    .route('/interface')
-    .get(getTree)
-    .post(saveTree)*/
-
-
 app.listen(4444, function(){   // порт 4444 можно указать любой свободный
     console.log('Api start')
 })
